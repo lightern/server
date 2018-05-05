@@ -83,7 +83,7 @@ curl --user "< username >" GET http://localhost:8888/
 Uncomment from /var/lib/postgres/data/postgresql.conf:
 listen_addresses = 'localhost,my_local_ip_address'
 
-Grant privileges:
+Start service
 ```
 systemctl start postresql.service
 systemctl enable postresql.service
