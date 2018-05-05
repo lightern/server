@@ -10,57 +10,79 @@ pacman -S npm
 
 ## Setting up postgresql:
 Log in as postgres:
-```sudo -u postgres -i```
+```
+sudo -u postgres -i
+```
 
-# to initialize database:
+To initialize database:
+```
 initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
+```
 
-# create db test:
+Create db test:
+```
 createdb test
+```
 
-# create user:
+Create user:
+```
 createuser <username>
+```
   
 
-# go into test:
+Go into test:
+```
 psql -d test
+```
 
-# Create schema, (not necessary)
+Create schema, (not necessary)
+```
 create schema friends:
+```
 
-# create table:
+Create table:
+```
 create table companies( id SERIAL, name CHAR(15), idea CHAR(20));
+```
 
-# insert
+Insert
+```
 insert into companies values (1, 'lol', 'lollataan');
+```
 
-# select
+Select
+```
 select * from companies;
+```
 
-# check columns:
+Check columns:
+```
 \d test
+```
 
-# check out: 
+Check out: 
+```
 \q
+```
 
-# create password:
+Create password:
+```
 alter user <username> with encrypted password '<password>';
-alter user antti with encrypted password 'antti1';
+```
 
-# grant privileges:
+Grant privileges:
+```
 grant all privileges on database <dbname> to <username> ;
-grant all privileges on database test to antti ;
+```
+
+Test
+curl --user "<username>" GET http://localhost:8888/
 
 
 
-# test
-curl --user "antti" GET http://localhost:8888/
-
-
-
-# uncomment from /var/lib/postgres/data/postgresql.conf:
+Uncomment from /var/lib/postgres/data/postgresql.conf:
 listen_addresses = 'localhost,my_local_ip_address'
 
-# for more info:
-# https://github.com/mevdschee/php-crud-api#configuration
-# https://www.leaseweb.com/labs/2015/10/creating-a-simple-rest-api-in-php/
+Gor more info:
+https://github.com/mevdschee/php-crud-api#configuration
+https://www.leaseweb.com/labs/2015/10/creating-a-simple-rest-api-in-php/
