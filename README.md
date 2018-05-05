@@ -42,12 +42,12 @@ create schema friends:
 
 Create table:
 ```
-create table companies( id SERIAL, name CHAR(15), idea CHAR(20));
+CREATE TABLE companies (id SERIAL PRIMARY KEY, name VARCHAR NOT NULL, idea VARCHAR);
 ```
 
 Insert
 ```
-insert into companies values (1, 'lol', 'lollataan');
+INSERT INTO companies (name, idea) VALUES ('company1', 'idea1');
 ```
 
 Select
