@@ -76,7 +76,7 @@ grant all privileges on database <dbname> to <username> ;
 ```
 
 Test
-curl --user "<username>" GET http://localhost:8888/
+curl --user "< username >" GET http://localhost:8888/
 
 
 
