@@ -83,6 +83,12 @@ curl --user "< username >" GET http://localhost:8888/
 Uncomment from /var/lib/postgres/data/postgresql.conf:
 listen_addresses = 'localhost,my_local_ip_address'
 
+Grant privileges:
+```
+systemctl start postresql.service
+systemctl enable postresql.service
+```
+
 Gor more info:
 https://github.com/mevdschee/php-crud-api#configuration
 https://www.leaseweb.com/labs/2015/10/creating-a-simple-rest-api-in-php/
