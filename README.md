@@ -88,6 +88,8 @@ Start service
 systemctl start postresql.service
 systemctl enable postresql.service
 ```
+In API remember to define also the used database!
+
 
 Gor more info:
 https://github.com/mevdschee/php-crud-api#configuration
