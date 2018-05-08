@@ -40,9 +40,10 @@ Create schema, (not necessary)
 create schema friends:
 ```
 
-Create table:
+Create tables:
 ```
-CREATE TABLE companies (id SERIAL PRIMARY KEY, name VARCHAR NOT NULL, idea VARCHAR);
+CREATE TABLE companies (id SERIAL PRIMARY KEY, name VARCHAR NOT NULL, idea VARCHAR NOT NULL);
+CREATE TABLE users (id SERIAL PRIMARY KEY, email VARCHAR NOT NULL, password VARCHAR NOT NULL);
 ```
 
 Insert
