@@ -42,8 +42,8 @@ create schema friends:
 
 Create tables:
 ```
-CREATE TABLE companies (companyid SERIAL PRIMARY KEY, name VARCHAR NOT NULL, idea VARCHAR NOT NULL);
-CREATE TABLE users (userid SERIAL PRIMARY KEY, email VARCHAR NOT NULL, password VARCHAR NOT NULL, status VARCHAR NOT NULL);
+CREATE TABLE companies (companyid SERIAL PRIMARY KEY, companyname VARCHAR NOT NULL, companyidea VARCHAR NOT NULL);
+CREATE TABLE users (userid SERIAL PRIMARY KEY, useremail VARCHAR NOT NULL, userpassword VARCHAR NOT NULL, userstatus VARCHAR NOT NULL);
 ```
 
 Insert
