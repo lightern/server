@@ -43,7 +43,7 @@ create schema friends:
 Create tables:
 ```
 CREATE TABLE companies (companyid SERIAL PRIMARY KEY, companyname VARCHAR NOT NULL, companyidea VARCHAR NOT NULL);
-CREATE TABLE users (userid SERIAL PRIMARY KEY, useremail VARCHAR NOT NULL, userpassword VARCHAR NOT NULL, userstatus VARCHAR NOT NULL);
+CREATE TABLE users (userid SERIAL PRIMARY KEY, useremail VARCHAR UNIQUE NOT NULL, userpassword VARCHAR NOT NULL, usersalt VARCHAR NOT NULL, userstatus VARCHAR NOT NULL);
 ```
 
 Insert
