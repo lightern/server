@@ -70,6 +70,8 @@ CREATE TABLE professions (professionid SERIAL PRIMARY KEY, profession VARCHAR NO
 
 ```
 
+Import data
+
 Insert
 ```
 INSERT INTO companies (name, idea) VALUES ('company1', 'idea1');
