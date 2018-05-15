@@ -26,6 +26,12 @@ sed -i "/port = 5432/s/^#//g" '/var/lib/postgres/data/postgresql.conf'
 sed -i "/listen_addresses = 'localhost'/s/^#//g" '/var/lib/postgres/data/postgresql.conf'
 ```
 
+Start service
+```
+systemctl start postresql.service
+systemctl enable postresql.service
+```
+
 **Restart computer**
 
 Log in back as postgres:
@@ -97,12 +103,6 @@ grant all privileges on database <dbname> to <username> ;
 Test
 curl --user "< username >" GET http://localhost:8888/
 
-
-Start service
-```
-systemctl start postresql.service
-systemctl enable postresql.service
-```
 In API remember to define also the used database!
 
 
