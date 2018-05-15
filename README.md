@@ -19,6 +19,10 @@ To initialize database:
 initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
 ```
 
+Uncomment from /var/lib/postgres/data/postgresql.conf:
+listen_addresses = 'localhost,my_local_ip_address'
+port = 5432
+
 Create db test:
 ```
 createdb test
@@ -84,10 +88,6 @@ grant all privileges on database <dbname> to <username> ;
 Test
 curl --user "< username >" GET http://localhost:8888/
 
-
-
-Uncomment from /var/lib/postgres/data/postgresql.conf:
-listen_addresses = 'localhost,my_local_ip_address'
 
 Start service
 ```
