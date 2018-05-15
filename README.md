@@ -93,7 +93,8 @@ Import data, then ctrl+d and exit!
 
 Insert
 ```
-INSERT INTO companies (name, idea) VALUES ('company1', 'idea1');
+insert into companies (creatorid, name, idea, code, sector, subcode, subsector, city, area, lookingfor, contactdetails, extrainfo) values (1, 'Meitsin firma', 'Ostoskeskus', 3, 'Sektori', 4, 'Subsektori', 'Helsinki', 'Uusimaa', 'Meedio', '0700123123', 'Ei lisätietoja.');
+
 ```
 
 Select
