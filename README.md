@@ -41,14 +41,25 @@ sudo -u postgres -i
 
 Create db test:
 ```
-createdb test
+createdb <dbname>
 ```
 
 Create user:
 ```
 createuser <username>
 ```
-  
+
+Create password:
+```
+alter user <username> with encrypted password '<password>';
+```
+
+Grant privileges:
+```
+grant all privileges on database <dbname> to <username> ;
+```
+
+
 Go into test:
 ```
 psql -d test
@@ -92,16 +103,6 @@ Check columns:
 Check out: 
 ```
 \q
-```
-
-Create password:
-```
-alter user <username> with encrypted password '<password>';
-```
-
-Grant privileges:
-```
-grant all privileges on database <dbname> to <username> ;
 ```
 
 Test
