@@ -51,7 +51,7 @@ createuser <username>
 
 Go into test:
 ```
-psql -d test
+psql -d <dbname>
 ```
 
 Create password:
