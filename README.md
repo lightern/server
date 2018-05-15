@@ -70,7 +70,9 @@ CREATE TABLE professions (professionid SERIAL PRIMARY KEY, profession VARCHAR NO
 
 ```
 
-Import data
+Import data, then ctrl+d and exit!
+
+## Useful commands
 
 Insert
 ```
