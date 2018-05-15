@@ -14,15 +14,21 @@ Log in as postgres:
 sudo -u postgres -i
 ```
 
-To initialize database:
+Initialize database and exit as postgres:
 ```
 initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
+exit
 ```
 
 Uncomment listen_addresses and port from /var/lib/postgres/data/postgresql.conf:
 ```
 sed -i "/port = 5432/s/^#//g" '/var/lib/postgres/data/postgresql.conf'
 sed -i "/listen_addresses = 'localhost'/s/^#//g" '/var/lib/postgres/data/postgresql.conf'
+```
+
+Log in back as postgres:
+```
+sudo -u postgres -i
 ```
 
 Create db test:
@@ -35,7 +41,6 @@ Create user:
 createuser <username>
 ```
   
-
 Go into test:
 ```
 psql -d test
