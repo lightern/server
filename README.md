@@ -23,6 +23,12 @@ Uncomment from /var/lib/postgres/data/postgresql.conf:
 listen_addresses = 'localhost,my_local_ip_address'
 port = 5432
 
+Terminal commands for that:
+```
+sed -i "/port = 5432/s/^#//g" '/var/lib/postgres/data/postgresql.conf'
+sed -i "/listen_addresses = 'localhost'/s/^#//g" '/var/lib/postgres/data/postgresql.conf'
+```
+
 Create db test:
 ```
 createdb test
