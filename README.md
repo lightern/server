@@ -20,7 +20,9 @@ initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
 ```
 
 Uncomment from /var/lib/postgres/data/postgresql.conf:
+
 listen_addresses = 'localhost,my_local_ip_address'
+
 port = 5432
 
 Terminal commands for that:
