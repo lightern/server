@@ -3,6 +3,7 @@
 ```
 pacman -Syu
 pacman -S apache
+sysemctl start httpd.service
 ```
 
 
