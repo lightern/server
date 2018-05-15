@@ -19,13 +19,7 @@ To initialize database:
 initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
 ```
 
-Uncomment from /var/lib/postgres/data/postgresql.conf:
-
-listen_addresses = 'localhost,my_local_ip_address'
-
-port = 5432
-
-Terminal commands for that:
+Uncomment listen_addresses and port from /var/lib/postgres/data/postgresql.conf:
 ```
 sed -i "/port = 5432/s/^#//g" '/var/lib/postgres/data/postgresql.conf'
 sed -i "/listen_addresses = 'localhost'/s/^#//g" '/var/lib/postgres/data/postgresql.conf'
