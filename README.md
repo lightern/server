@@ -1,5 +1,13 @@
 # Setting up server
 
+```
+pacman -Syu
+pacman -S apache
+```
+
+
+## Setting up postgresql:
+
 Let's update and install some packages:
 ```
 pacman -Syu
@@ -7,8 +15,6 @@ pacman -S postgresql
 pacman -S npm
 ```
 
-
-## Setting up postgresql:
 Log in as postgres:
 ```
 sudo -u postgres -i
