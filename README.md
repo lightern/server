@@ -49,6 +49,11 @@ Create user:
 createuser <username>
 ```
 
+Go into test:
+```
+psql -d test
+```
+
 Create password:
 ```
 alter user <username> with encrypted password '<password>';
@@ -57,12 +62,6 @@ alter user <username> with encrypted password '<password>';
 Grant privileges:
 ```
 grant all privileges on database <dbname> to <username> ;
-```
-
-
-Go into test:
-```
-psql -d test
 ```
 
 Create schema, (not necessary)
