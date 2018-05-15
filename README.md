@@ -46,19 +46,19 @@ Log in back as postgres:
 sudo -u postgres -i
 ```
 
-Create db test:
+Create db <dbname>:
 ```
-createdb <dbname>
+createdb test
 ```
 
-Create user:
+Create <username>:
 ```
 createuser <username>
 ```
 
-Go into test:
+Go into <dbname>:
 ```
-psql -d <dbname>
+psql -d test
 ```
 
 Create password:
