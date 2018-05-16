@@ -37,8 +37,8 @@ sed -i "/listen_addresses = 'localhost'/s/^#//g" '/var/lib/postgres/data/postgre
 
 Start service
 ```
-systemctl start postresql.service
-systemctl enable postresql.service
+systemctl start postgresql.service
+systemctl enable postgresql.service
 ```
 
 Log in back as postgres:
