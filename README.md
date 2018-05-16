@@ -78,7 +78,7 @@ create schema friends:
 
 Create tables:
 ```
-CREATE TABLE companies (companyid SERIAL PRIMARY KEY, creatorid INT NOT NULL, name VARCHAR UNIQUE NOT NULL, idea VARCHAR, code VARCHAR, sector VARCHAR, subcode VARCHAR, subsector VARCHAR, city VARCHAR, area VARCHAR, lookingfor VARCHAR, contactdetails VARCHAR, extrainfo VARCHAR, createdate TIMESTAMP NOT NULL, startdate TIMESTAMP, status VARCHAR);
+CREATE TABLE companies (companyid SERIAL PRIMARY KEY, creatorid INT NOT NULL, name VARCHAR NOT NULL, idea VARCHAR, code VARCHAR, sector VARCHAR, subcode VARCHAR, subsector VARCHAR, city VARCHAR, area VARCHAR, lookingfor VARCHAR, contactdetails VARCHAR, extrainfo VARCHAR, createdate TIMESTAMP NOT NULL, startdate TIMESTAMP, status VARCHAR);
 CREATE TABLE users (userid SERIAL PRIMARY KEY, useremail VARCHAR UNIQUE NOT NULL, userpassword VARCHAR NOT NULL, usersalt VARCHAR NOT NULL, usertoken VARCHAR NOT NULL, userstatus VARCHAR NOT NULL);
 CREATE TABLE cities (cityid SERIAL PRIMARY KEY, city VARCHAR NOT NULL, citysw VARCHAR NOT NULL, area VARCHAR NOT NULL);
 CREATE TABLE sectors (sectorid SERIAL PRIMARY KEY, code VARCHAR NOT NULL, sector VARCHAR NOT NULL, subcode VARCHAR NOT NULL, subsector VARCHAR NOT NULL);
