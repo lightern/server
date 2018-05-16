@@ -14,7 +14,6 @@ Let's update and install some packages:
 ```
 pacman -Syu
 pacman -S postgresql
-pacman -S npm
 ```
 
 Log in as postgres:
