@@ -33,13 +33,13 @@ sed -i "/port = 5432/s/^#//g" '/var/lib/postgres/data/postgresql.conf'
 sed -i "/listen_addresses = 'localhost'/s/^#//g" '/var/lib/postgres/data/postgresql.conf'
 ```
 
+**Restart computer**
+
 Start service
 ```
 systemctl start postresql.service
 systemctl enable postresql.service
 ```
-
-**Restart computer**
 
 Log in back as postgres:
 ```
