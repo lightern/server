@@ -6,7 +6,10 @@ pacman -S apache
 systemctl start httpd.service
 systemctl enable httpd.service
 ```
-
+## Create CSR for SSL (uses Apaches information):
+```
+openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr
+```
 
 ## Setting up postgresql:
 
