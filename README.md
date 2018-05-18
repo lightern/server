@@ -7,15 +7,17 @@ systemctl start httpd.service
 systemctl enable httpd.service
 ```
 ## Create HTTPS:
-On server, generate CSR:
-```
-openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr
-```
 In /etc/httpd/conf/httpd.conf, uncomment these:
 ```
 LoadModule ssl_module modules/mod_ssl.so
 LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
 Include conf/extra/httpd-ssl.conf
+```
+On server, generate CSR:
+```
+cd /etc/httpd/conf
+openssl req -new -x509 -nodes -newkey rsa:4096 -keyout server.key -out server.crt -days 1095
+chmod 400 server.key
 ```
 After obtaining a key and certificate, make sure the SSLCertificateFile and SSLCertificateKeyFile lines in /etc/httpd/conf/extra/httpd-ssl.conf point to the key and certificate. 
 
