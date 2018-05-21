@@ -1,3 +1,5 @@
+https://www.digitalocean.com/community/tutorials/how-to-optimize-nginx-configuration
+
 # Setting up server
 
 ```
