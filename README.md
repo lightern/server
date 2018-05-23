@@ -8,6 +8,7 @@ systemctl enable nginx.service
 ```
 To remember:
 * Default path: /usr/share/nginx/html/index.html
+* Config: /etc/nginx/nginx.conf
 
 More info:
 * https://wiki.archlinux.org/index.php/Nginx
