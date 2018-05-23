@@ -33,7 +33,32 @@ Remember to:
 sudo service nginx restart
 ```
 
-To remember:
+#### Setting up multiple domains:
+Edit /etc/nginx/nginx.conf:
+```
+server {
+        listen 80;
+        listen [::]:80;
+        server_name domainname1.dom;
+        root /usr/share/nginx/domainname1.dom/html;
+        location / {
+           index index.php index.html index.htm;
+        }
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+        server_name domainname2.dom;
+        root /usr/share/nginx/domainname2.dom/html;
+        location / {
+           index index.php index.html index.htm;
+        }
+}
+```
+https://wiki.archlinux.org/index.php/Nginx#Server_blocks
+
+#### To remember:
 * Default path: /usr/share/nginx/html/index.html
 * Config: /etc/nginx/nginx.conf
 
