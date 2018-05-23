@@ -1,11 +1,25 @@
 ## Setting up nginx server
 
+#### Installation:
 ```
 pacman -Syu
 sudo pacman -S nginx-mainline
 systemctl start nginx.service
 systemctl enable nginx.service
 ```
+#### Optimization:
+First let's look for number of cores and cores limitations:
+```
+grep processor /proc/cpuinfo | wc -l
+ulimit -n
+```
+
+Then update the info to /etc/nginx/nginx.conf:
+```
+worker_processes <number of cores>;
+worker_connections <ulimit>;
+```
+
 To remember:
 * Default path: /usr/share/nginx/html/index.html
 * Config: /etc/nginx/nginx.conf
