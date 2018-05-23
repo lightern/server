@@ -3,7 +3,7 @@
 #### Installation:
 ```
 pacman -Syu
-sudo pacman -S nginx-mainline
+pacman -S nginx-mainline
 systemctl start nginx.service
 systemctl enable nginx.service
 ```
