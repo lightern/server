@@ -18,6 +18,19 @@ Then update the info to /etc/nginx/nginx.conf:
 ```
 worker_processes <number of cores>;
 worker_connections <ulimit>;
+client_body_buffer_size 10K;
+client_header_buffer_size 1k;
+client_max_body_size 8m;
+large_client_header_buffers 2 1k;
+client_body_timeout 12;
+client_header_timeout 12;
+keepalive_timeout 15;
+send_timeout 10;
+```
+
+Remember to:
+```
+sudo service nginx restart
 ```
 
 To remember:
