@@ -1,6 +1,18 @@
-https://www.digitalocean.com/community/tutorials/how-to-optimize-nginx-configuration
+## Setting up nginx server
 
-# Setting up server
+```
+pacman -Syu
+sudo pacman -S nginx-mainline
+systemctl start nginx.service
+systemctl enable nginx.service
+```
+To remember:
+..* Default path: /usr/share/nginx/html/index.html
+More info:
+..* https://wiki.archlinux.org/index.php/Nginx
+..* https://www.digitalocean.com/community/tutorials/how-to-optimize-nginx-configuration
+
+## Setting up Apache server
 
 ```
 pacman -Syu
@@ -8,7 +20,7 @@ pacman -S apache
 systemctl start httpd.service
 systemctl enable httpd.service
 ```
-## Create HTTPS:
+#### Create HTTPS in Apache:
 In /etc/httpd/conf/httpd.conf, uncomment these:
 ```
 LoadModule ssl_module modules/mod_ssl.so
