@@ -1,8 +1,11 @@
 ## Setup software:
-#### Autologin:
+#### Autostart API:
 ```
-mkdir -p /etc/systemd/system/getty@tty1.service.d/
-echo $'[Service]\nExecStart=\nExecStart=-/usr/bin/agetty --autologin root --noclear %I $TERM' >> /etc/systemd/system/getty@tty1.service.d/override.conf
+touch /etc/systemd/system/api.service
+chmod 664 /etc/systemd/system/api.service
+echo $'[Unit]\nDescription=API\n\n[Service]\nExecStart=/root/api\nType=forking\nRestart=always\n\n[Install]\nWantedBy=default.target' >> /etc/systemd/system/api.service
+systemctl enable api.service
+systemctl start api.service
 ```
 
 ## Setting up nginx server
