@@ -1,7 +1,9 @@
 ## Setup software:
 #### Autologin:
+```
 mkdir -p /mnt/etc/systemd/system/getty@tty1.service.d/
 echo $'[Service]\nExecStart=\nExecStart=-/usr/bin/agetty --autologin root --noclear %I $TERM' >> /mnt/etc/systemd/system/getty@tty1.service.d/override.conf
+```
 
 ## Setting up nginx server
 
